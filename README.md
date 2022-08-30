@@ -8,7 +8,7 @@ I just learn and share what i learn to you. I hope you enjoy it.
 
 This article is about software.
 
-Give me support by start this repo or give donation.
+Give me support by star this repo or give donation.
 
 <a href='https://paypal.me/AlbirrKarim' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://user-images.githubusercontent.com/29292018/186840848-65e25ff9-47e2-424b-bfa0-4ca5d027b346.png' border='0' alt='Donate via paypal' /></a>
 
@@ -41,12 +41,12 @@ For make right decision you must consider your:
 | --- | ----------- |
 | Apps | everything (wordpress, node js, phoenix, php, python, static) |
 | Trafic | Medium - High |
-| Control Panel | In vps you must install your control panel by yourself. so you must choose. Paid: cpanel Free: Cyberpanel |
+| Control Panel | In vps you must install your control panel by yourself. so you must choose. see [this section](#control-panel)|
 | Budget | Medium - High |
 | Skill | Dev ops person. |
 
 
-# Any
+# Explanation
 
 ## Operating system
 
