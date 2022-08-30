@@ -10,7 +10,7 @@ This article is about software.
 
 Give me support by start this repo or give donation.
 
-[Paypal](https://paypal.me/AlbirrKarim)
+<a href='https://paypal.me/AlbirrKarim' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://user-images.githubusercontent.com/29292018/186840848-65e25ff9-47e2-424b-bfa0-4ca5d027b346.png' border='0' alt='Donate via paypal' /></a>
 
 <a href='https://ko-fi.com/Q5Q0BC92X' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
@@ -26,46 +26,25 @@ For make right decision you must consider your:
 
 ### A. Shared Hosting
 
-#### Apps
+| Aspect | Description |
+| --- | ----------- |
+| Apps | Wordpress hosting, laravel, static pages |
+| Trafic | Low |
+| Control Panel | cpanel |
+| Budget | Low |
+| Skill | Not a dev ops person. usually you're just programmer making apps |
 
-Wordpress hosting, laravel, static pages
-
-### Trafic
-
-Low
-
-### Control Panel
-
-cpanel
-
-#### Budget
-
-low
-
-#### Skill
-
-Not a dev ops person. usually you're just programmer making apps
 
 ### B. VPS
 
-#### Apps
+| Aspect | Description |
+| --- | ----------- |
+| Apps | everything (wordpress, node js, phoenix, php, python, static) |
+| Trafic | Medium - High |
+| Control Panel | In vps you must install your control panel by yourself. so you must choose. Paid: cpanel Free: Cyberpanel |
+| Budget | Medium - High |
+| Skill | Dev ops person. |
 
-everything (wordpress, node js, phoenix, php, python, static)
-
-#### Control Panel:
-
-In vps you must install your control panel by yourself. so you must choose.
-
-Paid: cpanel
-Free: Cyberpanel
-
-#### Budget:
-
-medium-high
-
-#### Skill
-
-Dev ops person.
 
 # Any
 
