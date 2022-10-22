@@ -79,6 +79,18 @@ I will do it every month. for synchronization.
 
 Using `.sh` script so i just execute it.
 
+make file `backup.sh` then
+
+```bash
+chmod +x backup.sh
+```
+
+Fill with
+
+```bash
+scp -r YOUR_USERNAME@YOUR_SERVER_IP:/absolute_path/THE_FOLDER_IN_SERVER /absolute_path/YOUR_LOCAL_FOLDER_HERE
+```
+
 This is good article :
 
 1. [Server Backup Methods: Five Ways to Keep Your Data Safe](https://www.novabackup.com/blog/finding-the-right-server-backup-methods)
