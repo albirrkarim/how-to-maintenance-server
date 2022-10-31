@@ -26,25 +26,23 @@ For make right decision you must consider your:
 
 ### A. Shared Hosting
 
-| Aspect | Description |
-| --- | ----------- |
-| Apps | Wordpress hosting, laravel, static pages |
-| Trafic | Low |
-| Control Panel | cpanel |
-| Budget | Low |
-| Skill | Not a dev ops person. usually you're just programmer making apps |
-
+| Aspect        | Description                                                      |
+| ------------- | ---------------------------------------------------------------- |
+| Apps          | Wordpress hosting, laravel, static pages                         |
+| Trafic        | Low                                                              |
+| Control Panel | cpanel                                                           |
+| Budget        | Low                                                              |
+| Skill         | Not a dev ops person. usually you're just programmer making apps |
 
 ### B. VPS
 
-| Aspect | Description |
-| --- | ----------- |
-| Apps | everything (wordpress, node js, phoenix, php, python, static) |
-| Trafic | Medium - High |
-| Control Panel | In vps you must install your control panel by yourself. so you must choose. see [this section](#control-panel)|
-| Budget | Medium - High |
-| Skill | Dev ops person. |
-
+| Aspect        | Description                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| Apps          | everything (wordpress, node js, phoenix, php, python, static)                                                  |
+| Trafic        | Medium - High                                                                                                  |
+| Control Panel | In vps you must install your control panel by yourself. so you must choose. see [this section](#control-panel) |
+| Budget        | Medium - High                                                                                                  |
+| Skill         | Dev ops person.                                                                                                |
 
 # Explanation
 
@@ -85,15 +83,42 @@ make file `backup.sh` then
 chmod +x backup.sh
 ```
 
-Fill with
+The script is depends on your needs. what you want to backup, here the example from my needs:
+
+## For Assets Backup (Image/Video/etc)
 
 ```bash
 scp -r YOUR_USERNAME@YOUR_SERVER_IP:/absolute_path/THE_FOLDER_IN_SERVER /absolute_path/YOUR_LOCAL_FOLDER_HERE
 ```
 
+## For MySQL Database Backup
+
+We must [login to vps whitout password](https://github.com/albirrkarim/how-to-maintenance-server/blob/main/SSH.md).
+
+Now make script for backup MySQL whitout typing a password
+
+Make file `.my.cnf` and fill with
+
+```
+[mysqldump]
+password=your_password
+```
+
+```
+mysqldump --defaults-file=/absolute_path_to/.my.cnf -u DB_USERNAME DB_NAME > my_db.sql
+```
+
+## For Postgrest Database Backup
+
+
+Im working on it
+
+
 This is good article :
 
 1. [Server Backup Methods: Five Ways to Keep Your Data Safe](https://www.novabackup.com/blog/finding-the-right-server-backup-methods)
+
+https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
 
 ## PHP
 
