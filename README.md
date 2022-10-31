@@ -68,13 +68,13 @@ You can use:
 
 ## Backup
 
-Really, for now i don't understand about how to backup.
+There's method for backup on server or backup on local.
 
-I backup manually using hardisk.
+I choose backup on local(OFFLINE). because if my server completely destroyed i still have backup on OFFLINE. I backup using hardisk.
 
 I will do it every month. for synchronization.
 
-Using `.sh` script so i just execute it.
+Using `.sh` script so i just execute it. and wait the proccess done.
 
 make file `backup.sh` then
 
@@ -82,7 +82,7 @@ make file `backup.sh` then
 chmod +x backup.sh
 ```
 
-The script is depends on your needs. what you want to backup, here the example from my needs:
+**The script is depends on your needs. what you want to backup, here the example from my needs:**
 
 ### For Assets Backup (Image/Video/etc)
 
@@ -122,6 +122,8 @@ Make file `.my.cnf` and fill with
 [mysqldump]
 password=your_password
 ```
+
+Then execute backup with this:
 
 ```
 mysqldump --defaults-file=/absolute_path_to/.my.cnf -u DB_USERNAME DB_NAME > my_db.sql
