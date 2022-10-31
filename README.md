@@ -141,6 +141,58 @@ RESTORE
 psql -U user db_name -h localhost -p 5432 < /directory/archive.sql
 ```
 
+
+### Bash Script Example
+
+```bash
+
+# Procedural Backup Web Storage, Mysql, Postgres
+# example.com
+# https://github.com/albirrkarim/how-to-maintenance-server
+
+Backup_Folder="/Users/susanto/Downloads"
+ServerName="example.com"
+Username="root"
+ServerIP="xxx.xxx.xxx.xxx"
+RSAPrivateKey="/Users/susanto/.ssh/example"
+
+# Timestamp
+now="$(date +'%d_%m_%Y_%H_%M_%S')"
+
+echo "Starting Backup for $ServerName with assets, db mysql, db postgres on $now"
+
+# For File Storage Backup
+scp -r $Username@$ServerIP:/home/admin/projects/reticulum/storage $Backup_Folder/storage_reticulum
+scp -r $Username@$ServerIP:/home/admin/projects/laravel/storage/app/public $Backup_Folder/storage_laravel
+
+
+BackupDBPathOnServer="/home/admin/backup_db";
+
+# Backup MySQL For Laravel
+db_name_mysql="laravel_db"
+db_username_mysql="admin"
+filename="db_mysql_"$ServerName"_$now".sql
+
+ssh -i $RSAPrivateKey $Username@$ServerIP "mysqldump --defaults-file=/home/admin/.my.cnf -u $db_username_mysql $db_name_mysql > $BackupDBPathOnServer/$filename"
+
+
+# Backup Postgres Database For Hubs
+db_name_postgres="ret_prod"
+db_username_postgres="postgres"
+db_password_postgres="postgres"
+filename_postgres="db_postgres_"$ServerName"_$now".sql
+
+
+ssh -i $RSAPrivateKey $Username@$ServerIP "PGPASSWORD=$db_password_postgres pg_dump -U $db_username_postgres -h localhost -p 5432 $db_name_postgres > $BackupDBPathOnServer/$filename_postgres"
+
+# Download database to local
+scp $Username@$ServerIP:$BackupDBPathOnServer/$filename $Backup_Folder/$filename
+scp $Username@$ServerIP:$BackupDBPathOnServer/$filename_postgres $Backup_Folder/$filename_postgres
+
+
+echo "Backup for $ServerName Done"
+
+```
 <br>
 <br>
 
