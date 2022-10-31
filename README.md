@@ -134,13 +134,13 @@ mysqldump --defaults-file=/absolute_path_to/.my.cnf -u DB_USERNAME DB_NAME > my_
 
 BACKUP
 ```
-pg_dump -U user -h localhost -p 5432 db_name > archive_name.sql
+PGPASSWORD=your_password pg_dump -U your_username -h localhost -p 5432 db_name > archive_name.sql
 ```
-
+<!-- 
 RESTORE
 ```
-psql -U user db_name -h localhost -p 5432 < /directory/archive.sql
-```
+PGPASSWORD=your_password psql -U your_username db_name -h localhost -p 5432 < /directory/archive.sql
+``` -->
 
 
 ### Bash Script Example
