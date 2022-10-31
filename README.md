@@ -168,7 +168,7 @@ scp -r $Username@$ServerIP:/home/admin/projects/laravel/storage/app/public $Back
 
 BackupDBPathOnServer="/home/admin/backup_db";
 
-# Backup MySQL For Laravel
+# Backup MySQL
 db_name_mysql="laravel_db"
 db_username_mysql="admin"
 filename="db_mysql_"$ServerName"_$now".sql
@@ -176,7 +176,7 @@ filename="db_mysql_"$ServerName"_$now".sql
 ssh -i $RSAPrivateKey $Username@$ServerIP "mysqldump --defaults-file=/home/admin/.my.cnf -u $db_username_mysql $db_name_mysql > $BackupDBPathOnServer/$filename"
 
 
-# Backup Postgres Database For Hubs
+# Backup Postgres Database
 db_name_postgres="ret_prod"
 db_username_postgres="postgres"
 db_password_postgres="postgres"
