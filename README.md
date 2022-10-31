@@ -129,7 +129,15 @@ mysqldump --defaults-file=/absolute_path_to/.my.cnf -u DB_USERNAME DB_NAME > my_
 
 ### For PostgreSQL Database Backup
 
-Im working on it
+BACKUP
+```
+pg_dump -U user -h localhost -p 5432 db_name > archive_name.sql
+```
+
+RESTORE
+```
+psql -U user db_name -h localhost -p 5432 < /directory/archive.sql
+```
 
 <br>
 <br>
