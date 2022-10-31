@@ -68,7 +68,7 @@ You can use:
 
 ## Backup
 
-There's method for backup on server or backup on local.
+There are method for backup on server or backup on local.
 
 I choose backup on local(OFFLINE). because if my server completely destroyed i still have backup on OFFLINE. I backup using hardisk.
 
