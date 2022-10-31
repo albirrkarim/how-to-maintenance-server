@@ -56,16 +56,15 @@ In case you are using your server for many website which is PHP website.
 
 You can use:
 
-- cpanel (paid services)
+- [Cpanel](https://cpanel.net/) (paid services)
   Easy to use, a lot of feature.
 
-- cyberpanel (free) <- i use this.
+- [Cyberpanel](https://cyberpanel.net) (free) <- i use this.
   Not that easy, but its still good.
 
 ## Overall Monitoring
 
-- Webmin
-  this is free, a lot of feature to explore.
+- [Webmin](https://www.webmin.com/) (Free), Lot of feature to explore.
 
 ## Backup
 
@@ -85,15 +84,15 @@ chmod +x backup.sh
 
 The script is depends on your needs. what you want to backup, here the example from my needs:
 
-## For Assets Backup (Image/Video/etc)
+### For Assets Backup (Image/Video/etc)
 
 ```bash
 scp -r YOUR_USERNAME@YOUR_SERVER_IP:/absolute_path/THE_FOLDER_IN_SERVER /absolute_path/YOUR_LOCAL_FOLDER_HERE
 ```
 
-## For MySQL Database Backup
+### For MySQL Database Backup
 
-We must [login to vps whitout password](https://github.com/albirrkarim/how-to-maintenance-server/blob/main/SSH.md).
+We must [login to vps whitout password](https://github.com/albirrkarim/how-to-maintenance-server/blob/master/SSH.mdu).
 
 Now make script for backup MySQL whitout typing a password
 
@@ -108,11 +107,13 @@ password=your_password
 mysqldump --defaults-file=/absolute_path_to/.my.cnf -u DB_USERNAME DB_NAME > my_db.sql
 ```
 
-## For Postgrest Database Backup
-
+### For Postgrest Database Backup
 
 Im working on it
 
+<br>
+<br>
+<br>
 
 This is good article :
 
@@ -120,10 +121,23 @@ This is good article :
 
 https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
 
-## PHP
+
+<br>
+
+## Version Management
+
+### PHP
 
 This is for selecting default php version
-
 ```
 sudo update-alternatives --config php
 ```
+
+### Node JS
+
+i use `nvm`
+
+
+### Elixir and erlang
+
+i use `asdf`
