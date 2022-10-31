@@ -86,9 +86,29 @@ The script is depends on your needs. what you want to backup, here the example f
 
 ### For Assets Backup (Image/Video/etc)
 
+#### Method 1
+
+```
+Folder on server -> Send to local -> zip
+```
+
+Im not zip and unzip on server for now. because it will take more server resources (HIGH CPU & RAM) and spaces. 
+
+This is the commands for it.
+
 ```bash
 scp -r YOUR_USERNAME@YOUR_SERVER_IP:/absolute_path/THE_FOLDER_IN_SERVER_YOU_WANT_TO_BACKUP /absolute_path/YOUR_LOCAL_FOLDER_HERE
 ```
+
+the `-r` mean reqursive (for folder backup).
+
+#### Method 2
+
+```
+Folder on server -> zip first -> Send to local -> delete zip on server
+```
+
+Maybe i will use zip first then send to local later. after considering many things.
 
 ### For MySQL Database Backup
 
@@ -119,6 +139,7 @@ Im working on it
 ### PHP
 
 This is for selecting default php version
+
 ```
 sudo update-alternatives --config php
 ```
@@ -126,7 +147,6 @@ sudo update-alternatives --config php
 ### Node JS
 
 i use `nvm`
-
 
 ### Elixir and erlang
 
