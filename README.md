@@ -112,7 +112,7 @@ Maybe i will use zip first then send to local later. after considering many thin
 
 ### For MySQL Database Backup
 
-We must [login to vps without password](https://github.com/albirrkarim/how-to-maintenance-server/blob/master/SSH.mdu).
+We must [login to vps without password](https://github.com/albirrkarim/how-to-maintenance-server/blob/master/SSH.md#login-ssh-whitout-password-using-rsa-public--private-key).
 
 Now make script for backup MySQL without typing a password
 
