@@ -120,6 +120,7 @@ Make file `.my.cnf` and fill with
 
 ```
 [mysqldump]
+user=admin
 password=your_password
 ```
 
@@ -173,6 +174,7 @@ db_name_mysql="laravel_db"
 db_username_mysql="admin"
 filename="db_mysql_"$ServerName"_$now".sql
 
+# for the .my.cnf see https://github.com/albirrkarim/how-to-maintenance-server#for-mysql-database-backup
 ssh -i $RSAPrivateKey $Username@$ServerIP "mysqldump --defaults-file=/home/admin/.my.cnf -u $db_username_mysql $db_name_mysql > $BackupDBPathOnServer/$filename"
 
 
