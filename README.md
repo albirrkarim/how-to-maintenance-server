@@ -113,16 +113,6 @@ Im working on it
 
 <br>
 <br>
-<br>
-
-This is good article :
-
-1. [Server Backup Methods: Five Ways to Keep Your Data Safe](https://www.novabackup.com/blog/finding-the-right-server-backup-methods)
-
-https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
-
-
-<br>
 
 ## Version Management
 
@@ -141,3 +131,9 @@ i use `nvm`
 ### Elixir and erlang
 
 i use `asdf`
+
+<br>
+
+## References That May be Useful
+
+1. [Server Backup Methods: Five Ways to Keep Your Data Safe](https://www.novabackup.com/blog/finding-the-right-server-backup-methods)
