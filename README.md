@@ -107,7 +107,7 @@ password=your_password
 mysqldump --defaults-file=/absolute_path_to/.my.cnf -u DB_USERNAME DB_NAME > my_db.sql
 ```
 
-### For Postgrest Database Backup
+### For PostgreSQL Database Backup
 
 Im working on it
 
