@@ -87,7 +87,7 @@ The script is depends on your needs. what you want to backup, here the example f
 ### For Assets Backup (Image/Video/etc)
 
 ```bash
-scp -r YOUR_USERNAME@YOUR_SERVER_IP:/absolute_path/THE_FOLDER_IN_SERVER /absolute_path/YOUR_LOCAL_FOLDER_HERE
+scp -r YOUR_USERNAME@YOUR_SERVER_IP:/absolute_path/THE_FOLDER_IN_SERVER_YOU_WANT_TO_BACKUP /absolute_path/YOUR_LOCAL_FOLDER_HERE
 ```
 
 ### For MySQL Database Backup
