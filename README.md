@@ -108,7 +108,12 @@ the `-r` mean reqursive (for folder backup).
 Folder on server -> zip first -> Send to local -> delete zip on server
 ```
 
-Maybe i will use zip first then send to local later. after considering many things.
+Maybe i will use zip first then send to local later. after considering many things such as:
+
+- Is your server have free storage at least one to one of folder you will zip?
+
+Example if your folder size is 3GB so at least your server have 3GB free storage.
+
 
 ### For MySQL Database Backup
 
@@ -195,6 +200,49 @@ scp $Username@$ServerIP:$BackupDBPathOnServer/$filename_postgres $Backup_Folder/
 echo "Backup for $ServerName Done"
 
 ```
+
+## Restore
+
+I will write later
+
+### Upload Folder to Server Using SCP
+...
+
+### For MySQL Database Restore
+
+...
+
+### For PostgreSQL Database Restore
+...
+
+### Bash Script For Restoring Site
+....
+
+
+## Compiling Web Assets (Dist)
+
+If you want compile webpack asset. so you can serve your web as static file you can do it on local or server. but it comes with pros and cons.
+
+### Compile on local (Laptop/ PC)
+
+**Pros**
+- Your server will not be disturbed at all.
+
+**Cons**
+- Reupload all `dist` folder to your server require internet data. 
+
+
+### Compile on server
+
+You can automate it with [github action runner](https://github.com/actions/runner).
+
+**Pros**
+-  Less internet data
+
+**Cons**
+- Your server will be disturbed, i mean compiling asset it will takes CPU and RAM a lot. if your server get full user will be disturbed.
+
+
 <br>
 <br>
 
