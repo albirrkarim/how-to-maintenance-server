@@ -1,6 +1,6 @@
 # How To Maintenance Server
 
-Hello guys, I will share my notes about maintenance server. Im new in dev ops field.
+I will share my notes about maintenance server. Im new in dev ops field.
 
 I think the best method to learn is with write down what you learn and share it to others. so i do this.
 
