@@ -44,6 +44,16 @@ For make right decision you must consider your:
 | Budget        | Medium - High                                                                                                  |
 | Skill         | Dev ops person.                                                                                                |
 
+### My Recommendation
+
+With considering many aspect i choose [domainesia](https://my.domainesia.com/ref.php?u=9015) as my hosting provider.
+
+If you in indonesia, i highly recommended [domainesia](https://my.domainesia.com/ref.php?u=9015) as your hosting provider.
+
+I buy VPS in here, The customer service is fast and helpful. the technical support also solve my problem. Even you can ask them to solve your problem.
+
+The price maybe higher than other hosting provider indonesia. but you will not be disappointed buying here.
+
 # Explanation
 
 ## Operating system
@@ -92,7 +102,7 @@ chmod +x backup.sh
 Folder on server -> Send to local -> zip
 ```
 
-Im not zip and unzip on server for now. because it will take more server resources (HIGH CPU & RAM) and spaces. 
+Im not zip and unzip on server for now. because it will take more server resources (HIGH CPU & RAM) and spaces.
 
 This is the commands for it.
 
@@ -113,7 +123,6 @@ Maybe i will use zip first then send to local later. after considering many thin
 - Is your server have free storage at least one to one of folder you will zip?
 
 Example if your folder size is 3GB so at least your server have 3GB free storage.
-
 
 ### For MySQL Database Backup
 
@@ -138,15 +147,16 @@ mysqldump --defaults-file=/absolute_path_to/.my.cnf -u DB_USERNAME DB_NAME > my_
 ### For PostgreSQL Database Backup
 
 BACKUP
+
 ```
 PGPASSWORD=your_password pg_dump -U your_username -h localhost -p 5432 db_name > archive_name.sql
 ```
-<!-- 
+
+<!--
 RESTORE
 ```
 PGPASSWORD=your_password psql -U your_username db_name -h localhost -p 5432 < /directory/archive.sql
 ``` -->
-
 
 ### Bash Script Example
 
@@ -206,6 +216,7 @@ echo "Backup for $ServerName Done"
 I will write later
 
 ### Upload Folder to Server Using SCP
+
 ...
 
 ### For MySQL Database Restore
@@ -213,11 +224,12 @@ I will write later
 ...
 
 ### For PostgreSQL Database Restore
+
 ...
 
 ### Bash Script For Restoring Site
-....
 
+....
 
 ## Compiling Web Assets (Dist)
 
@@ -226,22 +238,24 @@ If you want compile webpack asset. so you can serve your web as static file you 
 ### Compile on local (Laptop/ PC)
 
 **Pros**
+
 - Your server will not be disturbed at all.
 
 **Cons**
-- Reupload all `dist` folder to your server require internet data. 
 
+- Reupload all `dist` folder to your server require internet data.
 
 ### Compile on server
 
 You can automate it with [github action runner](https://github.com/actions/runner).
 
 **Pros**
--  Less internet data
+
+- Less internet data
 
 **Cons**
-- Your server will be disturbed, i mean compiling asset it will takes CPU and RAM a lot. if your server get full user will be disturbed.
 
+- Your server will be disturbed, i mean compiling asset it will takes CPU and RAM a lot. if your server get full user will be disturbed.
 
 <br>
 <br>
