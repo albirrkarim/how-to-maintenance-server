@@ -213,7 +213,7 @@ echo "Backup for $ServerName Done"
 
 ## Restore
 
-I will write later
+I haven't test this script yet
 
 ### Upload Folder to Server Using SCP
 
