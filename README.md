@@ -223,9 +223,9 @@ scp -r /local_dir user@example.com:/var/www/html/target_dir
 
 ### For MySQL Database Restore
 
+```
 mysql -u [user] -p [database_name] < [filename].sql
 ```
-...
 
 ### For PostgreSQL Database Restore
 
