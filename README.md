@@ -217,19 +217,86 @@ I will write later
 
 ### Upload Folder to Server Using SCP
 
-...
+```
+scp -r /local_dir user@example.com:/var/www/html/target_dir
+```
 
 ### For MySQL Database Restore
 
+mysql -u [user] -p [database_name] < [filename].sql
+```
 ...
 
 ### For PostgreSQL Database Restore
 
-...
+```
+pg_restore -d example_db example_db.sql
+```
 
-### Bash Script For Restoring Site
+### Bash Script For Restore
 
-....
+```
+# Procedural Backup Web Storage, Mysql, Postgres
+# example.com
+# https://github.com/albirrkarim/how-to-maintenance-server
+
+
+# Setting Up
+ZipName="full_backup_31_12_2022"
+ZipFilePath="/Users/susanto/Downloads/$ZipName.zip"
+ServerName="example"
+Username="root"
+ServerIP="123.123.123.123"
+RSAPrivateKey="/Users/susanto/.ssh/example"
+UploadDestinationOnServer="/home/admin/restore"
+
+# The backup folder contains
+# storage_A, storage_B, db_mysql_ServerName.sql, db_postgres_ServerName.sql
+
+# Timestamp
+now="$(date +'%d_%m_%Y_%H_%M_%S')"
+
+echo "Starting Restore for $ServerName with assets, db mysql, db postgres on $now"
+
+# For Uploading Backup Zip
+scp $ZipFilePath $Username@$ServerIP:$UploadDestinationOnServer
+
+# # Extract the zip
+ssh -i $RSAPrivateKey $Username@$ServerIP "cd $UploadDestinationOnServer && unzip $ZipName.zip"
+
+# # Copy the storage folder to each destination
+ssh -i $RSAPrivateKey $Username@$ServerIP "cp -r $UploadDestinationOnServer/$ZipName/storage_A /absolute_destination_A"
+ssh -i $RSAPrivateKey $Username@$ServerIP "cp -r $UploadDestinationOnServer/$ZipName/storage_B /absolute_destination_B"
+
+# Backup MySQL For Laravel
+db_name_mysql="laravel_akvirtual"
+db_username_mysql="admin"
+db_password_mysql="your_password"
+filename_mysql="db_mysql_"$ServerName"_"$now".sql"
+
+# Check is mysql config exist on server
+MysqlConfigTxt="mysql_config_user_"$db_username_mysql".txt"
+
+if [[ ! -f $UploadDestinationOnServer"/"$MysqlConfigTxt ]]
+then
+    echo $MysqlConfigTxt" File Doesn't Exist"
+    ssh -i $RSAPrivateKey $Username@$ServerIP "cd $UploadDestinationOnServer && echo '[mysqldump]\nuser=$db_username_mysql\npassword=$db_password_mysql' > '$MysqlConfigTxt'"
+else
+    echo $MysqlConfigTxt" File Exist"
+fi
+
+ssh -i $RSAPrivateKey $Username@$ServerIP "mysql --defaults-file=$MysqlConfigTxt -u $db_username_mysql $db_name_mysql < $UploadDestinationOnServer/$ZipName/$filename_mysql"
+
+# Restore Postgres Database For Hubs
+db_name_postgres="ret_prod_akvirtual"
+db_username_postgres="postgres"
+db_password_postgres="postgres"
+filename_postgres="db_postgres_"$ServerName".sql"
+
+ssh -i $RSAPrivateKey $Username@$ServerIP "PGPASSWORD=$db_password_postgres pg_restore -U $db_username_postgres -h localhost -p 5432 -d $db_name_postgres $UploadDestinationOnServer/$ZipName/$filename_postgres"
+
+echo "Restore for $ServerName Done"
+```
 
 ## Compiling Web Assets (Dist)
 
