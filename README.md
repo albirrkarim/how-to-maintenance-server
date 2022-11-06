@@ -236,7 +236,7 @@ pg_restore -d example_db example_db.sql
 ### Bash Script For Restore
 
 ```bash
-# Procedural Backup Web Storage, Mysql, Postgres
+# Procedural Restore Web Storage, Mysql, Postgres
 # example.com
 # https://github.com/albirrkarim/how-to-maintenance-server
 
