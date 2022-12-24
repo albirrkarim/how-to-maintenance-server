@@ -160,6 +160,9 @@ PGPASSWORD=your_password psql -U your_username db_name -h localhost -p 5432 < /d
 
 ### Bash Script Example
 
+<details>
+  <summary>Show code</summary>
+
 ```bash
 
 # Procedural Backup Web Storage, Mysql, Postgres
@@ -210,6 +213,10 @@ scp $Username@$ServerIP:$BackupDBPathOnServer/$filename_postgres $Backup_Folder/
 echo "Backup for $ServerName Done"
 
 ```
+</details>
+
+
+<br>
 
 ## Restore
 
@@ -234,6 +241,9 @@ pg_restore -d example_db example_db.sql
 ```
 
 ### Bash Script For Restore
+
+<details>
+  <summary>Show code</summary>
 
 ```bash
 # Procedural Restore Web Storage, Mysql, Postgres
@@ -297,6 +307,11 @@ ssh -i $RSAPrivateKey $Username@$ServerIP "PGPASSWORD=$db_password_postgres pg_r
 
 echo "Restore for $ServerName Done"
 ```
+
+</details>
+
+<br>
+
 
 ## Compiling Web Assets (Dist)
 
