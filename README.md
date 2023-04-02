@@ -16,6 +16,9 @@ Give me support by star this repo or give donation.
 
 # Choose Right Hosting Service
 
+<details>
+  <summary>Show detail</summary>
+  
 You have to choose the right hosting service.
 
 For make right decision you must consider your:
@@ -54,7 +57,15 @@ I buy VPS in here, The customer service is fast and helpful. the technical suppo
 
 The price maybe higher than other hosting provider indonesia. but you will not be disappointed buying here.
 
+</details>
+
+<br>
+<br>
+
 # Explanation
+
+<details>
+  <summary>Show detail</summary>
 
 ## Operating system
 
@@ -76,7 +87,12 @@ You can use:
 
 - [Webmin](https://www.webmin.com/) (Free), Lot of feature to explore.
 
-## Backup
+</details>
+
+<br>
+<br>
+
+# Backup
 
 There are method for backup on server or backup on local.
 
@@ -213,8 +229,8 @@ scp $Username@$ServerIP:$BackupDBPathOnServer/$filename_postgres $Backup_Folder/
 echo "Backup for $ServerName Done"
 
 ```
-</details>
 
+</details>
 
 <br>
 
@@ -312,7 +328,6 @@ echo "Restore for $ServerName Done"
 
 <br>
 
-
 ## Compiling Web Assets (Dist)
 
 If you want compile webpack asset. so you can serve your web as static file you can do it on local or server. but it comes with pros and cons.
@@ -344,6 +359,8 @@ You can automate it with [github action runner](https://github.com/actions/runne
 
 ## Version Management
 
+<details>
+  <summary>Show detail</summary>
 ### PHP
 
 This is for selecting default php version
@@ -360,6 +377,8 @@ i use `nvm`
 
 i use `asdf`
 
+
+</details>
 <br>
 
 ## References That May be Useful
